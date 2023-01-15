@@ -195,7 +195,7 @@ svg {
   gap: 10px;
 }
 
-.material-symbols-outlined {
+.material-symbols-outlined, .lessons-icons{
   animation: bounce 2.2s infinite;
   margin-top: 10px;
   transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
@@ -245,15 +245,12 @@ svg {
 }
 
 /* Section about */
-.About-Section {
-  max-height: 80vh;
-  padding-top: 150px;
-  padding-bottom: 100px;
+
+.about-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 0px;
-  background-color: var(--clr-pink);
+  padding-bottom: 100px;
 }
 
 .me-image {
@@ -275,13 +272,12 @@ svg {
   border-image: linear-gradient(to right, var(--clr-lpink), var(--clr-lpink2));
   border-image-slice: 1;
   padding: 36px;
-
 }
 
 @media (max-width: 800px) {
-  .about {
+  .about-container {
     flex-direction: column;
-    gap: 30px;
+    gap: 10px;
 
   }
 
@@ -289,12 +285,13 @@ svg {
     font-size: 1.1em;
     max-width: 70%;
     font-family: var(--ff-body);
+    max-height: 800px;
   }
 
   .me-image {
-    scale: 70%;
+    scale: 90%;
   }
-}
+} 
 
 /* Lessons section */
 
@@ -423,17 +420,14 @@ svg {
 
 }
 
-@media (max-width: 600px) {
+@media (max-width: 699px) {
   .lesson-part {
     max-width: 280px;
     min-height: 600px;
   }
 }
 
-
 /* Section Tales */
-
-
 
 .instagram-frame{
   height: 700px;
@@ -472,3 +466,5 @@ svg {
     padding-right:20%;
   }
 }
+
+/* Footer */

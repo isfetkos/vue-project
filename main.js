@@ -29,9 +29,8 @@ const app = createApp({
       ],
       icons: [
         'mdi-facebook',
-        'mdi-twitter',
         'mdi-linkedin',
-     'mdi-instagram',
+        'mdi-instagram',
     ],
     };
   },

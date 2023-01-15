@@ -34,10 +34,9 @@
         <button class="toggle-menu toggle-button hamburger-slim"></button>
       </div>
       <v-parallax src="./src/images/bitmap.svg">
-        <div class="d-flex flex-column justify-center align-center text-white">
-          <p id="h3-text">Η ιστορία μου</p>
-          <div class="d-flex flex-row justify-center align-center">
-            <h4 class="subheading">
+        <p id="h3-text">Η ιστορία μου</p>
+        <div class="about-container">
+          <img src="./src/images/me.jpg" class="me-image" alt="Logo">
               <div class="about-text">
                 <p>Καλώς ήρθατε στην ιστοσελίδα μου, αγαπητοί μου φίλοι. Είμαι ενθουσιασμένη να γνωρίσω νέους ανθρώπους
                   που
@@ -45,32 +44,27 @@
                   Η πλούσια γλώσσα μας και τα καταπληκτικά έργα που γίνονται με αυτήν.
                   Βιβλία, παραμύθια, έργα τέχνης και πολλά άλλα.
                   .</p>
-            </h4>
-            <img src="./src/images/me.jpg" class="me-image" alt="Logo">
-          </div>
+              </div>
         </div>
-        <!-- <v-footer class="d-flex flex-column justify-end align-end">
-          <div class="bg-teal d-flex w-100 align-center px-4">
-            <strong>Get connected with us on social networks!</strong>
-      
-            <v-spacer></v-spacer>
-      
-            <v-btn
-              v-for="icon in icons"
-              :key="icon"
-              class="mx-4"
-              :icon="icon"
-              variant="plain"
-              size="small"
-            ></v-btn>
-          </div>
-      
-          <div class="px-4 py-2 bg-black text-center w-100">
-            {{ new Date().getFullYear() }} — <strong>Vuetify</strong>
-          </div>
-        </v-footer> -->
-      </v-parallax>
-    </v-app>
+  </v-parallax>
+  <v-footer class="d-flex flex-column footer-stl">
+    <div class="bg-teal d-flex w-100 align-center px-4">
+      <strong>Τα Social Media μου, ελάτε να δικτυωθούμε!</strong>
+      <v-spacer></v-spacer>
+      <v-btn
+        v-for="icon in icons"
+        :key="icon"
+        class="mx-4"
+        :icon="icon"
+        variant="plain"
+        size="large"
+      ></v-btn>
+    </div>
+    <div class="px-4 py-2 bg-black text-center w-100">
+      {{ new Date().getFullYear() }} — <strong>Tell Your Kid A Story</strong>
+    </div>
+  </v-footer>
+  </v-app>
   </div>
   <script type="module" src="main.js"></script>
 </body>
