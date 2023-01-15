@@ -4,6 +4,8 @@ import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
+import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
+
 
 const vuetify = createVuetify({
   components,
@@ -25,14 +27,18 @@ const app = createApp({
         (v) => !!v || "E-mail is required",
         (v) => /.+@.+/.test(v) || "E-mail must be valid",
       ],
+      icons: [
+        'mdi-facebook',
+        'mdi-twitter',
+        'mdi-linkedin',
+     'mdi-instagram',
+    ],
     };
   },
   methods: {
-    test() {
-        console.log('hello world')
-    }
-  }
+  },
 });
+  
 
 app.use(vuetify);
 app.mount("#main");

@@ -16,6 +16,7 @@
       href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,200"
     />
   </head>
+
   <body>
     <!-- Header section including nav -->
     <div id="main">
@@ -45,64 +46,79 @@
           <button class="toggle-menu toggle-button hamburger-slim"></button>
         </div>
         <v-parallax src="./src/images/bitmap.svg">
-        <section id="Contact-Section">
-          <div id="background-contact">
-            <h1 id="h3-text">Θέλεις να συνεργαστούμε;</h1>
-            <form id="form" action="" class="topBefore">
-              <input id="name" type="text" placeholder="Το όνομα σου" />
-              <input
-                id="email"
-                name="email"
-                type="email"
-                placeholder="Το E-Mail σου"
-              />
-              <textarea
-                id="message"
-                type="text"
-                placeholder="Το μήνυμά σου"
-              ></textarea>
-              <input id="submit" type="submit" value="Submit" />
-            </form>
-          </div>
-        </section>
-        <v-form v-model="valid">
-          <v-container>
-            <v-row>
-              <v-col cols="12" md="4">
-                <v-text-field
-                  v-model="firstname"
-                  :rules="nameRules"
-                  :counter="10"
-                  label="First name"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" md="4">
-                <v-text-field
-                  v-model="lastname"
-                  :rules="nameRules"
-                  :counter="10"
-                  label="Last name"
-                  required
-                ></v-text-field>
-              </v-col>
-              <v-col cols="12" md="4">
-                <v-text-field
-                  v-model="email"
-                  :rules="emailRules"
-                  label="E-mail"
-                  required
-                ></v-text-field>
-              </v-col>
-            </v-row>
-            <v-row>
-              <v-btn @click="test">
-                test
-              </v-btn>
-            </v-row>
-          </v-container>
-        </v-form>
-        <v-parallax src="./src/images/bitmap.svg">
+          <p id="h3-text">Τα παραμύθια μου</p>
+          <v-form v-model="valid">
+            <v-container>
+              <v-row>
+                <v-col cols="12" md="4">
+                  <v-text-field
+                    class="contact"
+                    v-model="firstname"
+                    :rules="nameRules"
+                    :counter="10"
+                    label="Το μικρό σου"
+                    variant="outlined"
+                    color="var(--clr-white)"
+                    bg-color="var(--clr-pink)"
+                    required
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" md="4">
+                  <v-text-field
+                    class="contact"
+                    v-model="lastname"
+                    :rules="nameRules"
+                    :counter="10"
+                    label="Το επίθετο σου"
+                    color="var(--clr-white)"
+                    bg-color="var(--clr-pink)"
+                    variant="outlined"
+                    required
+                  ></v-text-field>
+                </v-col>
+                <v-col cols="12" md="4">
+                  <v-text-field
+                    class="contact"
+                    v-model="email"
+                    :rules="emailRules"
+                    label="Το E-mail σου"
+                    variant="outlined"
+                    color="var(--clr-white)"
+                    bg-color="var(--clr-pink)"
+                    required
+                  ></v-text-field>
+                </v-col>
+              </v-row>
+              <v-row>
+                <v-col cols="12" md="12">
+                  <v-textarea
+                    class="contact"
+                    color="var(--clr-white)"
+                    variant="outlined"
+                    bg-color="var(--clr-pink)"
+                    label="Το μήνυμά σου"
+                  >
+                  </v-textarea>
+                </v-col>
+            </v-container>
+          </v-row>
+          <div class="d-flex flex-column justify-center align-center button-contact">
+          <v-btn
+            class="button-hover"
+            variant="outlined"
+            bg-color="var(--clr-pink)"
+            size="large"
+          >
+            <v-icon
+              class="icon-btn"
+              color="var(--clr-gray)"
+              icon="mdi-checkbox-marked-circle"
+            ></v-icon
+            >Αποστολή
+          </v-btn>
+        </div>
+          </v-form>
+        </v-parallax>
       </v-app>
     </div>
     <script type="module" src="/main.js"></script>
