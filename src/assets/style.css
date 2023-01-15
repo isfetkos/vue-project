@@ -283,10 +283,6 @@ svg {
 
 /* Lessons section */
 
-.Lessons-Section {
-  background-color: var(--clr-pink);
-}
-
 .children {
   margin-top: 100px;
   display: flex;
@@ -423,30 +419,20 @@ svg {
 
 /* Section Tales */
 
-.Tales-Section {
-  background-color: var(--clr-pink);
-}
 
-.instagram-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-}
 
-.instagram-container iframe {
+.instagram-container{
   height: 700px;
   width: 390px;
   border: 10px solid var(--clr-white);
-  margin-bottom: 100px;
 }
 
-@media (max-width: 600px) {
-  .instagram-container iframe {
+/* @media (max-width: 600px) {
+  .instagram-container {
     width: 70%;
     height: 700px;
   }
-}
+} */
 
 
 /* Contact section */
@@ -555,9 +541,7 @@ textarea:hover {
 }
 
 @media (max-width: 1000px) {
-  #h3-text {
-    font-size: 2rem;
-  }
+  
   input, textarea, #submit {
     font-size: 1.2rem;
   }
