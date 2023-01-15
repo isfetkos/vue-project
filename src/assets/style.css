@@ -46,6 +46,10 @@ body {
   background-color: var(--clr-pink);
 }
 
+.v-application {
+  background: var(--clr-pink) !important;
+}
+
 /* Set core body defaults */
 body {
   text-rendering: optimizeSpeed;
@@ -450,8 +454,7 @@ svg {
 #Contact-Section {
   width: 100%;
   background-color: var(--clr-pink);
-  min-height:100vh;
-  bottom:0;
+  height: calc(100vh-)
 }
 
 #h3-text {

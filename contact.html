@@ -19,7 +19,7 @@
   <body>
     <!-- Header section including nav -->
     <div id="main">
-      <v-app>
+      <v-app class="main-container">
         <div class="container">
           <a href="index.html">
             <img src="src/images/logo1.svg" class="logo" alt="Logo" />
@@ -44,6 +44,7 @@
           </ul>
           <button class="toggle-menu toggle-button hamburger-slim"></button>
         </div>
+        <v-parallax src="./src/images/bitmap.svg">
         <section id="Contact-Section">
           <div id="background-contact">
             <h1 id="h3-text">Θέλεις να συνεργαστούμε;</h1>
@@ -94,8 +95,14 @@
                 ></v-text-field>
               </v-col>
             </v-row>
+            <v-row>
+              <v-btn @click="test">
+                test
+              </v-btn>
+            </v-row>
           </v-container>
         </v-form>
+        <v-parallax src="./src/images/bitmap.svg">
       </v-app>
     </div>
     <script type="module" src="/main.js"></script>
