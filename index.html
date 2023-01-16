@@ -37,34 +37,35 @@
         <p id="h3-text">Η ιστορία μου</p>
         <div class="about-container">
           <img src="./src/images/me.jpg" class="me-image" alt="Logo">
-              <div class="about-text">
-                <p>Καλώς ήρθατε στην ιστοσελίδα μου, αγαπητοί μου φίλοι. Είμαι ενθουσιασμένη να γνωρίσω νέους ανθρώπους
-                  που
-                  μοιράζονται τα ενδιαφέροντά μου. Ποια είναι αυτά;
-                  Η πλούσια γλώσσα μας και τα καταπληκτικά έργα που γίνονται με αυτήν.
-                  Βιβλία, παραμύθια, έργα τέχνης και πολλά άλλα.
-                  .</p>
-              </div>
+          <div class="about-text">
+            <p>Καλώς ήρθατε στην ιστοσελίδα μου, αγαπητοί μου φίλοι. Είμαι ενθουσιασμένη να γνωρίσω νέους ανθρώπους
+              που
+              μοιράζονται τα ενδιαφέροντά μου. Ποια είναι αυτά;
+              Η πλούσια γλώσσα μας και τα καταπληκτικά έργα που γίνονται με αυτήν.
+              Βιβλία, παραμύθια, έργα τέχνης και πολλά άλλα.
+              .</p>
+          </div>
         </div>
-  </v-parallax>
-  <v-footer class="d-flex flex-column footer-stl">
-    <div class="bg-teal d-flex w-100 align-center px-4">
-      <strong>Τα Social Media μου, ελάτε να δικτυωθούμε!</strong>
-      <v-spacer></v-spacer>
-      <v-btn
-        v-for="icon in icons"
-        :key="icon"
-        class="mx-4"
-        :icon="icon"
-        variant="plain"
-        size="large"
-      ></v-btn>
-    </div>
-    <div class="px-4 py-2 bg-black text-center w-100">
-      {{ new Date().getFullYear() }} — <strong>Tell Your Kid A Story</strong>
-    </div>
-  </v-footer>
-  </v-app>
+      </v-parallax>
+      <footer>
+        <div class="footer-container">
+          <h1>Τα κοινωνικα μου δίκτυα</h1>
+          <div social-btn>
+            <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-facebook</v-icon>
+            <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-instagram</v-icon>
+            <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-linkedin</v-icon>
+          </div>
+          <div class="legal">
+            <div>
+              <p>{{ new Date().getFullYear() }} — Copyright <strong>Tell Your Kid A Story</strong></p>
+            </div>
+            <div>
+              <p>Όροι χρήσεις | Πολιτική απορρήτου</p>
+            </div>
+          </div>
+        </div>
+      </footer>
+    </v-app>
   </div>
   <script type="module" src="main.js"></script>
 </body>

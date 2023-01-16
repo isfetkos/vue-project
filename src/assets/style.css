@@ -468,3 +468,61 @@ svg {
 }
 
 /* Footer */
+
+  .footer-container {
+    border-top: 6px solid var(--clr-pink);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    color: var(--clr-lpink);
+    font-family: var(--ff-body);
+    background:#8D629C;
+    gap:30px;
+    padding-top:30px;
+    padding-bottom:30px;
+  }
+  .footer-container h1 {
+    font-family: var(--ff-play);
+    font-size: 2em;
+  }
+  footer .icon-btn {
+  padding-right: 30px;
+  padding-left: 30px;
+  }
+  a, p {
+    text-decoration: inherit;
+  }
+
+  .legal {
+    width: 70%;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    border-top: 1px solid var(--clr-pink);
+  }
+  @media (width<750px) {
+    .legal {
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      gap:10px;}
+      .footer-container h1 {
+        font-size: 1.8em;
+      }
+    }
+  }
+  
+/* Timeline */ 
+
+.card1 {
+  padding-right:20px;
+}
+.first-card {
+  color: var(--clr-white);
+  background: #80C0ED;
+}
+.second-card {
+  color: var(--clr-white);
+  background: #80C0ED;
+}

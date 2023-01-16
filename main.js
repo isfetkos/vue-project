@@ -27,17 +27,11 @@ const app = createApp({
         (v) => !!v || "E-mail is required",
         (v) => /.+@.+/.test(v) || "E-mail must be valid",
       ],
-      icons: [
-        'mdi-facebook',
-        'mdi-linkedin',
-        'mdi-instagram',
-    ],
     };
   },
   methods: {
   },
 });
-  
 
 app.use(vuetify);
 app.mount("#main");
