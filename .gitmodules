@@ -1,3 +1,3 @@
-[submodule "path_to_submodule"] 
-  path = /Users/isfetkos/Documents/GitHub/vue-project/
-  url = git://https://github.com/isfetkos/vue-project
+[submodule "/Users/isfetkos/Documents/GitHub/vue-project"] 
+  path = /Users/isfetkos/Documents/GitHub/vue-project
+  url = git://https://github.com/isfetkos/vue-project.git
