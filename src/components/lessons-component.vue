@@ -51,7 +51,7 @@ export default {
     name: "lessons-component", 
     data() {
         return {
-            parallaxSrc:"./src/images/bitmap.svg"
+            parallaxSrc:"images/bitmap.svg"
         }
     }
     };

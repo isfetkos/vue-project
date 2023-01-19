@@ -41,7 +41,7 @@ export default {
     name: "contact-component",
     data() {
         return {
-            parallaxSrc: "./src/images/bitmap.svg"
+            parallaxSrc: "images/bitmap.svg"
         }
     }
 };
