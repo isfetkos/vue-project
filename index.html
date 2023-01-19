@@ -20,33 +20,23 @@
     <v-app>
       <div class="container">
         <a href="index.html">
-          <img src="src/images/logo1.svg" class="logo" alt="Logo">
+          <img src="images/logo1.svg" class="logo" alt="Logo">
         </a>
         <ul class="nav-list">
-          <li class="l1"><a href="index.html">το στόρι μου</a><span class="material-symbols-outlined">favorite</span>
+          <li class="l1"><div class="click" @click="changeSite('IndexComponent')">το στόρι μου <span
+              class="material-symbols-outlined">favorite</span></div>
+         </li>
+           <li class="l1"><div class="click" @click="changeSite('LessonsComponent')">το μάθημα <span
+              class="material-symbols-outlined">school</span></div></li>
+          <li class="l1"><div class="click" @click="changeSite('TalesComponent')">τα παραμύθια <span
+              class="material-symbols-outlined">interests</span></div>
           </li>
-          <li class="l1"><a href="lessons.html">το μάθημα</a><span class="material-symbols-outlined">school</span></li>
-          <li class="l1"><a href="tales.html">τα παραμύθια</a><span class="material-symbols-outlined">interests</span>
-          </li>
-          <li class="l1"><a href="contact.html">η επικοινωνία </a><span
-              class="material-symbols-outlined">alternate_email</span></li>
+          <li class="l1"><div class="click" @click="changeSite('ContactComponent')">η επικοινωνία <span
+              class="material-symbols-outlined">alternate_email</span></div></li>
         </ul>
         <button class="toggle-menu toggle-button hamburger-slim"></button>
       </div>
-      <v-parallax src="./src/images/bitmap.svg">
-        <p id="h3-text">Η ιστορία μου</p>
-        <div class="about-container">
-          <img src="./src/images/me.jpg" class="me-image" alt="Logo">
-          <div class="about-text">
-            <p>Καλώς ήρθατε στην ιστοσελίδα μου, αγαπητοί μου φίλοι. Είμαι ενθουσιασμένη να γνωρίσω νέους ανθρώπους
-              που
-              μοιράζονται τα ενδιαφέροντά μου. Ποια είναι αυτά;
-              Η πλούσια γλώσσα μας και τα καταπληκτικά έργα που γίνονται με αυτήν.
-              Βιβλία, παραμύθια, έργα τέχνης και πολλά άλλα.
-              .</p>
-          </div>
-        </div>
-      </v-parallax>
+      <component :is="siteComponent"></component>
       <footer>
         <div class="footer-container">
           <h1>Τα κοινωνικα μου δίκτυα</h1>

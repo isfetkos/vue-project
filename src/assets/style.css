@@ -169,23 +169,23 @@ svg {
   border-color: #ED8D8D;
 }
 
-.nav-list a {
+.nav-list .click {
   list-style: none;
   text-decoration: none;
   color: var(--clr-lpink);
   margin-bottom: 10px;
 }
 
-.nav-list li a,
+.nav-list li .click,
 .nav-list li span,
-.nav-list a,
+.nav-list .click,
 .nav-list span {
   transition: color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
 }
 
-.nav-list li:hover a,
+.nav-list li:hover .click,
 .nav-list li:hover span,
-.nav-list a:hover,
+.nav-list .click:hover,
 .nav-list span:hover {
   color: var(--clr-pink);
 }
@@ -206,15 +206,15 @@ svg {
 
 @keyframes bounce {
   0% {
-    transform: translateY(0);
+    transform: translateY(0px);
   }
 
   50% {
-    transform: translateY(-5px);
+    transform: translateY(5px);
   }
 
   100% {
-    transform: translateY(0);
+    transform: translateY(0 px);
   }
 }
 
