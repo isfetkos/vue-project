@@ -303,6 +303,9 @@ svg {
 }
 /* Properties of whole alert item */
 
+.v-timeline-item {
+  margin-top: 100px !important;
+}
 .v-timeline-item__body {
   max-width: 1000px;
   margin-right: 30px;
@@ -519,10 +522,18 @@ svg {
     gap:30px;
     padding-top:30px;
     padding-bottom:30px;
+    margin-top: 30px;
   }
   .footer-container h1 {
     font-family: var(--ff-play);
     font-size: 2em;
+  }
+  .balloon {
+    display: inline;
+    margin-left: 10px;
+    margin-right: 10px;
+    height: 40px;
+    transform: translateY(30%);
   }
   footer .icon-btn {
   padding-right: 30px;
@@ -546,9 +557,20 @@ svg {
       align-items: center;
       gap:10px;}
       .footer-container h1 {
-        font-size: 1.8em;
+        font-size: 1.5em;
       }
     }
+    @media (width<400px) {
+        .footer-container h1 {
+          font-size: 1.3em;
+        }
+        .balloon {
+          height: 25px;
+        }
+        .legal p, .terms {
+          font-size: 0.9em;
+        }
+      }
     .terms:hover {
       color:var(--clr-pink);
       cursor: pointer;
