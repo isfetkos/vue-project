@@ -4,12 +4,12 @@ import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
-import '@mdi/font/css/materialdesignicons.css' // Ensure you are using css-loader
-import LessonsComponent from "./src/components/lessons-component.vue"
-import IndexComponent from "./src/components/index-component.vue"
-import TalesComponent from "./src/components/tales-component.vue"
-import ContactComponent from "./src/components/contact-component.vue"
-
+import "@mdi/font/css/materialdesignicons.css"; // Ensure you are using css-loader
+import LessonsComponent from "./src/components/lessons-component.vue";
+import IndexComponent from "./src/components/index-component.vue";
+import TalesComponent from "./src/components/tales-component.vue";
+import ContactComponent from "./src/components/contact-component.vue";
+import termsComponent from "./src/components/terms-component.vue";
 
 const vuetify = createVuetify({
   components,
@@ -20,8 +20,9 @@ const app = createApp({
   components: {
     LessonsComponent,
     TalesComponent,
-    ContactComponent, 
-    IndexComponent
+    ContactComponent,
+    IndexComponent,
+    termsComponent,
   },
   data() {
     return {
@@ -42,9 +43,9 @@ const app = createApp({
   },
   methods: {
     changeSite(site) {
-      console.log(site)
-      this.siteComponent=site
-    }
+      console.log(site);
+      this.siteComponent = site;
+    },
   },
 });
 

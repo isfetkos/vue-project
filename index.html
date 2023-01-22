@@ -1,6 +1,5 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/favicon.ico">
@@ -42,7 +41,9 @@
           <h1>Τα κοινωνικα μου δίκτυα</h1>
           <div social-btn>
             <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-facebook</v-icon>
-            <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-instagram</v-icon>
+            <a href="https://www.instagram.com/tell_your_kid_a_story/">
+              <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-instagram</v-icon>
+            </a>
             <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-linkedin</v-icon>
           </div>
           <div class="legal">
@@ -50,11 +51,13 @@
               <p>{{ new Date().getFullYear() }} — Copyright <strong>Tell Your Kid A Story</strong></p>
             </div>
             <div>
-              <p>Όροι χρήσεις | Πολιτική απορρήτου</p>
+              <div class="click" @click="changeSite('termsComponent')">
+              <p class="terms">Όροι χρήσεις | Πολιτική απορρήτου</p>
+              <div class="click" @click="changeSite('termsComponent')"></div>
             </div>
           </div>
         </div>
-      </footer>
+      </footer> 
     </v-app>
   </div>
   <script type="module" src="main.js"></script>

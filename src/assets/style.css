@@ -28,6 +28,11 @@
   font: inherit;
 }
 
+::selection {
+  background-color: #82CFB9; /* red color */
+  color: #ffffff; /* white color */
+}
+
 /* Remove list styles on ul, ol elements with a list role, which suggests default styling will be removed */
 ul[role='list'],
 ol[role='list'] {
@@ -278,8 +283,8 @@ svg {
   .about-container {
     flex-direction: column;
     gap: 10px;
-
   }
+  
 
   .about-text {
     font-size: 1.1em;
@@ -292,6 +297,37 @@ svg {
     scale: 90%;
   }
 } 
+
+.index-timeline {
+  height:auto !important;
+}
+/* Properties of whole alert item */
+
+.v-timeline-item__body {
+  max-width: 1000px;
+  margin-right: 30px;
+}
+.v-alert:hover {
+  background-color: rgba(246, 203, 203, 0.6) !important;
+}
+/* Properties of  alert title */
+.v-alert-title {
+  color:#121212;
+}
+/* Properties of  alert text */
+.v-alert__content {
+  color:#121212;
+  padding: 10px;
+  text-align: justify;
+}
+/*Properties of alert outer circle */
+.v-timeline-divider__dot {
+  background-color: var(--clr-lpink) !important;
+}
+/* Properties of alert devider lines */
+.v-timeline-divider__before, .v-timeline-divider__after {
+  background: var(--clr-lpink) !important;
+}
 
 /* Lessons section */
 
@@ -459,11 +495,13 @@ svg {
 .icon-btn {
   padding-right: 10px;
 }
-
+.icon-btn:hover {
+  opacity: 0.7;
+}
 @media (max-width: 960px) {
   .contact {
-    padding-left:20%;
-    padding-right:20%;
+    padding-left:10%;
+    padding-right:10%;
   }
 }
 
@@ -511,17 +549,26 @@ svg {
         font-size: 1.8em;
       }
     }
+    .terms:hover {
+      color:var(--clr-pink);
+      cursor: pointer;
+    }
+    .cookies {
+      text-align: justify;
+      width: 70%;
+      background: var(--clr-purple);
+      padding: 30px;
+      opacity: 0.5;
+      font-weight: 700;
+    }
+    #h2-text {
+      font-family: var(--ff-play);
+      color: var(--clr-white);
+      text-align: center;
+      font-size: 2rem;
+      font-weight: 700;
+      margin-bottom: 30px;
+      margin-top: 30px;
+    }
   
 /* Timeline */ 
-
-.card1 {
-  padding-right:20px;
-}
-.first-card {
-  color: var(--clr-white);
-  background: #80C0ED;
-}
-.second-card {
-  color: var(--clr-white);
-  background: #80C0ED;
-}

@@ -39,11 +39,7 @@
         <a href="#" class="product__btn btn">Μάθε περισσοτερα</a>
       </div>
     </div>
-    <div class="location">
-      <h1 id="h3-text">Τo γραφείο</h1>
-        <iframe id="gmap" src="https://maps.google.com/maps?q=platanias,%20chania&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
-        </iframe>
-  </div> 
+
   </v-parallax>
 </template>
 <script>
