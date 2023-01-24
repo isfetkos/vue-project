@@ -48,9 +48,8 @@ const app = createApp({
     },
   },
 });
-
-app.use(vuetify);
-app.mount("#main");
+app.use(vuetify)
+app.mount("#app")
 
 const toggleMenu = document.querySelector(".toggle-menu");
 const navList = document.querySelector(".nav-list");
