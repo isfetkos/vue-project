@@ -37,19 +37,24 @@
       <component :is="siteComponent"></component>
       <footer>
         <div class="footer-container">
-          
-          <h1><img class="balloon" src="images/balloon.svg">Τα κοινωνικα μου δίκτυα<img class="balloon" src="images/balloon.svg"></h1>
-          <div social-btn>
+          <h1><img class="balloon" src="images/balloon.svg">{{ $t("hello") }}<img class="balloon" src="images/balloon.svg"></h1>
+        <div class="social-container">
+          <div class="social-btn">
             <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-facebook</v-icon>
             <a href="https://www.instagram.com/tell_your_kid_a_story/">
               <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-instagram</v-icon>
             </a>
             <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-linkedin</v-icon>
           </div>
+          <v-switch class="switch" color="var(--clr-lpink)" density="comfort" label="Ελληνικά | English" v-model="currentLanguage" true-value="el" false-value="en"></v-switch>
+        </div>
           <div class="legal">
-            <div>
-              <p>{{ new Date().getFullYear() }} — Copyright <strong>Tell Your Kid A Story</strong></p>
+            <div class="legal1">
+              <p>
+                <div class="click2" @click="changeSite('LoginComponent')">{{ new Date().getFullYear() }}</div>— Copyright <strong>Tell Your Kid A Story</strong></p>
             </div>
+            <div>
+          </div>
             <div>
               <div class="click" @click="changeSite('termsComponent')">
               <p class="terms">Όροι χρήσεις | Πολιτική απορρήτου</p>
