@@ -1,25 +1,7 @@
 <template>
   <v-parallax :src="parallaxSrc">
     <p id="h3-text">Επικοινωνία</p>
-    <div class="letter-container">
-    <div class="letter-image">
-      <div class="animated-mail">
-        <div class="back-fold"></div>
-        <div class="letter">
-          <div class="letter-border"></div>
-          <div class="letter-title"></div>
-          <div class="letter-context"></div>
-          <div class="letter-stamp">
-            <div class="letter-stamp-inner"></div>
-          </div>
-        </div>
-        <div class="top-fold"></div>
-        <div class="body"></div>
-        <div class="left-fold"></div>
-      </div>
-      <div class="shadow"></div>
-    </div>
-  </div>
+  
     <form ref="form" @submit.prevent="sendEmail">
       <v-container>
         <v-row>
@@ -99,8 +81,27 @@
           location-strategy="connected"
           scroll-strategy="none"
         >
-          <v-card class="pa-5" color="var(--clr-purple)">
-            ❤ Σε ευχαριστώ πολύ για το μήνυμά σου ❤ 
+          <v-card class="card-submit" color="var(--clr-pink)">
+            <p id="h2-letter">Σε ευχαριστώ πολύ για το μήνυμά σου </p>
+            <div class="letter-container">
+              <div class="letter-image">
+                <div class="animated-mail">
+                  <div class="back-fold"></div>
+                  <div class="letter">
+                    <div class="letter-border"></div>
+                    <div class="letter-title"></div>
+                    <div class="letter-context"></div>
+                    <div class="letter-stamp">
+                      <div class="letter-stamp-inner"></div>
+                    </div>
+                  </div>
+                  <div class="top-fold"></div>
+                  <div class="body"></div>
+                  <div class="left-fold"></div>
+                </div>
+                <div class="shadow"></div>
+              </div>
+            </div>
           </v-card>
         </v-overlay>
         </v-btn>

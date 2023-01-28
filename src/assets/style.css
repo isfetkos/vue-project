@@ -614,9 +614,22 @@ svg {
       margin-top: 30px;
     }
   
-/* Timeline */ 
+   .card-submit {
+    height: 500px;
+   } 
+   #h2-letter {
+    font-family: var(--ff-play);
+    color: var(--clr-white);
+    text-align: center;
+    font-size: 2rem;
+    font-weight: 700;
+    padding: 30px;
+   }
+
+/* Letter */ 
 .letter-container {
   position: relative;
+  margin-top: 150px;
 }
  .letter-image {
   position: absolute;
@@ -722,21 +735,7 @@ svg {
   background: #cb5a5e;
   opacity: 0.3;
 }
-.shadow {
-  position: absolute;
-  top: 200px;
-  left: 50%;
-  width: 400px;
-  height: 30px;
-  transition: 0.4s;
-  transform: translateX(-50%);
-  -webkit-transition: 0.4s;
-  -webkit-transform: translateX(-50%);
-  -moz-transition: 0.4s;
-  -moz-transform: translateX(-50%);
-  border-radius: 100%;
-  background: radial-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.0));
-}
+
 .letter-image:hover .animated-mail {
   transform: translateY(50px);
   -webkit-transform: translateY(50px);
