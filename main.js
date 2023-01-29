@@ -91,6 +91,7 @@ const toggleButton = document.querySelector(".toggle-button");
 const navLinks = document.querySelectorAll("nav a");
 const text = document.querySelector("#h3-text");
 
+
 // h3 linear gradient 
 
 const letters = text.innerHTML.split("");
@@ -111,8 +112,9 @@ toggleMenu.addEventListener("click", function () {
     navList.style.flexDirection = "row";
   } else {
     navList.style.display = "flex";
-    logo.style.display = "none";
     navList.style.flexDirection = "column";
+    container.style.flexDirection = "column"
+
   }
 });
 

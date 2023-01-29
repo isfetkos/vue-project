@@ -47,7 +47,7 @@ html:focus-within {
 html,
 body {
   height: 100%;
-  font-family: var(--ff-body);
+  font-family: var(--ff-play);
   background-color: var(--clr-pink);
 }
 
@@ -78,7 +78,7 @@ svg {
   font-family: var(--ff-play);
   color: var(--clr-white);
   text-align: center;
-  font-size: 3rem;
+  font-size: 4rem;
   margin-bottom: 60px;
   padding-top: 60px;
   font-weight: 700;
@@ -91,7 +91,7 @@ svg {
 
 @media (max-width: 600px) {
   #h3-text {
-    font-size: 2rem;
+    font-size: 3rem;
   }
 }
 
@@ -110,9 +110,20 @@ svg {
   align-items: center;
   justify-content: space-between;
   padding-left: 20px;
-  padding-right: 40px;
+  padding-right: 20px;
   padding-top: 20px;
   padding-bottom: 20px;
+}
+
+.nav-logo-btn {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+  padding-left: 0;
+  padding-right: 0;
+  padding-top: 0;
+  padding-bottom: 0;
 }
 
 .toggle-menu {
@@ -175,7 +186,7 @@ svg {
   gap: 20px;
   color: var(--clr-lpink);
   font-weight: 400;
-  font-size: 1.5em;
+  font-size: 1.6em;
   border-color: #ED8D8D;
 }
 
@@ -233,13 +244,15 @@ svg {
   .nav-list {
     display: none;
     /* hide the nav list on mobile devices */
-    font-size: 1.2em;
+    font-size: 1.1em;
+    width: 100%;
+    justify-content: center;
+    align-items: center;
+    margin-top: 10px;
   }
-
-  .l1 {
-    border-bottom: 1px solid var(--clr-lpink);
+  .nav-logo-btn{
+    width: 100%;
   }
-
   .hamburger-slim {
     scale: 80%;
   }
@@ -256,11 +269,20 @@ svg {
 
 /* Section about */
 
+.about-container1 {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
 .about-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  padding-bottom: 100px;
+  margin-bottom: 100px;
+  gap:20px;
+  width: 50%;
 }
 
 .me-image {
@@ -269,19 +291,16 @@ svg {
   border-image-slice: 1;
   object-fit: cover;
   width: 250px;
-  max-height: 350px;
+  height: 350px;
 }
 
 .about-text {
-  width: 500px;
   max-height: 350px;
+  width: 200px;
+  width: auto;
   color: var(--clr-white);
-  font-size: 1.3rem;
+  font-size: 1.5rem;
   text-align: justify;
-  border: 10px solid;
-  border-image: linear-gradient(to right, var(--clr-lpink), var(--clr-lpink2));
-  border-image-slice: 1;
-  padding: 36px;
 }
 
 @media (max-width: 800px) {
@@ -292,15 +311,14 @@ svg {
   
 
   .about-text {
-    font-size: 1.1em;
-    max-width: 70%;
+    font-size: 1.3em;
     font-family: var(--ff-body);
-    max-height: 800px;
+    height:300px;
   }
 
   .me-image {
     scale: 90%;
-  }
+    }
 } 
 
 .index-timeline {
@@ -320,7 +338,10 @@ svg {
 }
 /* Properties of  alert title */
 .v-alert-title {
-  color:#121212;
+  color:#4D4D4D;
+  font-weight: 700 !important;
+  font-size: 1.3em !important;
+  margin-bottom: 5px;
 }
 /* Properties of  alert text */
 .v-alert__content {
@@ -344,6 +365,7 @@ svg {
   justify-content: center;
   align-items: center;
   gap: 60px;
+  margin-bottom: 100px;
 }
 
 .lesson-part {
@@ -522,7 +544,7 @@ svg {
     align-items: center;
     justify-content: center;
     color: var(--clr-lpink);
-    font-family: var(--ff-body);
+    font-family: var(--ff-play);
     background:#8D629C;
     gap:20px;
     padding-top:30px;
@@ -532,6 +554,7 @@ svg {
   .footer-container h1 {
     font-family: var(--ff-play);
     font-size: 2em;
+    font-weight: 700;
   }
   .balloon {
     display: inline;

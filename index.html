@@ -17,22 +17,24 @@
   <div id="app">
     <v-app>
       <div class="container">
+        <div class="nav-logo-btn">
         <a href="index.html">
           <img src="images/logo1.svg" class="logo" alt="Logo">
         </a>
+        <button class="toggle-menu toggle-button hamburger-slim"></button>
+      </div>
         <ul class="nav-list">
           <li class="l1"><div class="click" @click="changeSite('IndexComponent')">{{ $t("t_nav_index") }}<span
               class="material-symbols-outlined">favorite</span></div>
          </li>
            <li class="l1"><div class="click" @click="changeSite('LessonsComponent')">{{ $t("t_nav_lesson") }}<span
-              class="material-symbols-outlined">school</span></div></li>
+              class="material-symbols-outlined">school</span></div></li>   
           <li class="l1"><div class="click" @click="changeSite('TalesComponent')">{{ $t("t_nav_tales") }} <span
               class="material-symbols-outlined">interests</span></div>
           </li>
           <li class="l1"><div class="click" @click="changeSite('ContactComponent')">{{ $t("t_nav_contact") }} <span
               class="material-symbols-outlined">alternate_email</span></div></li>
         </ul>
-        <button class="toggle-menu toggle-button hamburger-slim"></button>
       </div>
       <component :is="siteComponent"></component>
       <footer>
