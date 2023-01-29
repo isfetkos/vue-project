@@ -1,6 +1,6 @@
 <template>
   <v-parallax :src="parallaxSrc">
-    <p id="h3-text">Επικοινωνία</p>
+    <p id="h3-text">{{$t("t_contact_header")}}</p>
   
     <form ref="form" @submit.prevent="sendEmail">
       <v-container>
@@ -12,7 +12,7 @@
               :rules="nameRules"
               :counter="10"
               name="user_name"
-              label="Το μικρό σου"
+              :label="this.$t(`t_contact_name`)"
               variant="outlined"
               color="var(--clr-white)"
               bg-color="var(--clr-pink)"
@@ -26,7 +26,7 @@
               :rules="nameRules"
               :counter="10"
               name="user_name1"
-              label="Το επίθετο σου"
+              :label="this.$t(`t_contact_surname`)"
               color="var(--clr-white)"
               bg-color="var(--clr-pink)"
               variant="outlined"
@@ -39,7 +39,7 @@
               type="email"
               :rules="emailRules"
               name="user-email"
-              label="Το E-mail σου"
+              :label="this.$t(`t_contact_email`)"
               variant="outlined"
               color="var(--clr-white)"
               bg-color="var(--clr-pink)"
@@ -55,7 +55,7 @@
               variant="outlined"
               bg-color="var(--clr-pink)"
               name="message"
-              label="Το μήνυμά σου"
+              :label="this.$t(`t_contact_message`)"
             >
             </v-textarea>
           </v-col>
@@ -82,7 +82,7 @@
           scroll-strategy="none"
         >
           <v-card class="card-submit" color="var(--clr-pink)">
-            <p id="h2-letter">Σε ευχαριστώ πολύ για το μήνυμά σου </p>
+            <p id="h2-letter">{{$t("t_contact_header3")}}</p>
             <div class="letter-container">
               <div class="letter-image">
                 <div class="animated-mail">
@@ -108,7 +108,7 @@
       </div>
     </form>
     <div class="location">
-      <h1 id="h3-text">Τo γραφείο</h1>
+      <h1 id="h3-text">{{$t("t_contact_header2")}}</h1>
         <iframe id="gmap" src="https://maps.google.com/maps?q=platanias,%20chania&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
         </iframe>
   </div> 

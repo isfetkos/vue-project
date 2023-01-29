@@ -78,21 +78,6 @@ const app = createApp({
   }
 });
 
-
-
-
-/*document.addEventListener('DOMContentLoaded', () => {
-  const languageButton = document.querySelector('.language-button');
-  languageButton.addEventListener('click', () => {
-    console.log('it worked')
-    if (i18n.locale === 'el') {
-      i18n.locale = 'en';
-    } else {
-      i18n.locale = 'el';
-    }
-  });
-}); */
-
 app.use(i18n)
 app.use(vuetify)
 app.mount("#app")

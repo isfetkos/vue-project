@@ -21,15 +21,15 @@
           <img src="images/logo1.svg" class="logo" alt="Logo">
         </a>
         <ul class="nav-list">
-          <li class="l1"><div class="click" @click="changeSite('IndexComponent')">το στόρι μου <span
+          <li class="l1"><div class="click" @click="changeSite('IndexComponent')">{{ $t("t_nav_index") }}<span
               class="material-symbols-outlined">favorite</span></div>
          </li>
-           <li class="l1"><div class="click" @click="changeSite('LessonsComponent')">το μάθημα <span
+           <li class="l1"><div class="click" @click="changeSite('LessonsComponent')">{{ $t("t_nav_lesson") }}<span
               class="material-symbols-outlined">school</span></div></li>
-          <li class="l1"><div class="click" @click="changeSite('TalesComponent')">τα παραμύθια <span
+          <li class="l1"><div class="click" @click="changeSite('TalesComponent')">{{ $t("t_nav_tales") }} <span
               class="material-symbols-outlined">interests</span></div>
           </li>
-          <li class="l1"><div class="click" @click="changeSite('ContactComponent')">η επικοινωνία <span
+          <li class="l1"><div class="click" @click="changeSite('ContactComponent')">{{ $t("t_nav_contact") }} <span
               class="material-symbols-outlined">alternate_email</span></div></li>
         </ul>
         <button class="toggle-menu toggle-button hamburger-slim"></button>
@@ -37,7 +37,7 @@
       <component :is="siteComponent"></component>
       <footer>
         <div class="footer-container">
-          <h1><img class="balloon" src="images/balloon.svg">{{ $t("hello") }}<img class="balloon" src="images/balloon.svg"></h1>
+          <h1><img class="balloon" src="images/balloon.svg">{{ $t("t_footer_header") }}<img class="balloon" src="images/balloon.svg"></h1>
         <div class="social-container">
           <div class="social-btn">
             <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-facebook</v-icon>
@@ -57,7 +57,7 @@
           </div>
             <div>
               <div class="click" @click="changeSite('termsComponent')">
-              <p class="terms">Όροι χρήσεις | Πολιτική απορρήτου</p>
+              <p class="terms">{{ $t("t_footer_legal") }}</p>
               <div class="click" @click="changeSite('termsComponent')"></div>
             </div>
           </div>
