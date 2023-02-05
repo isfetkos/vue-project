@@ -1,4 +1,5 @@
 <template>
+  <!--
     <v-parallax :src="parallaxSrc">
             <p id="h3-text">{{ $t("t_tales_header") }}</p>
             Components /
@@ -86,7 +87,6 @@
                         <a href="#0" class="articles-v3__author-img">
                           <img src="img/article-gallery-v3-author-img-1.jpg" alt="Author picture">
                         </a>
-                  
                         <div class="articles-v3__author-info">
                           <p><a href="#0" class="articles-v3__author-name" rel="author">Olivia Gribben</a></p>
                           <p class="articles-v3__date"><time>Oct 4, 2050</time>, &mdash; 5 min read</p>
@@ -100,6 +100,7 @@
             
             Copy HTML
       </v-parallax>
+    -->
 </template>
 <script>
 export default { 
@@ -112,4 +113,4 @@ export default {
     };
 </script>
 
-<style scoped></style>
+<style scoped></style> 

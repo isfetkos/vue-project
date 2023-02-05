@@ -913,19 +913,17 @@ svg {
   flex-direction: column;
 }
 
-/* Blog */
+/* Blog 
 Component 
-
--------------------------------- */
 
 .articles-v3 {}
 
-.articles-v3__list-grid { /* gap between articles */
+.articles-v3__list-grid { /* gap between articles 
   display: grid;
   gap: 4.5rem;
 }
 
-.articles-v3__item-grid { /* single post */
+.articles-v3__item-grid { /* single post 
   display: grid;
   align-items: start;
   gap: 1rem;
@@ -1037,7 +1035,7 @@ Component
     grid-template-columns: 7fr 5fr;
     gap: 3rem;
   }
-}
+} */
 
 /* -------------------------------- 
 
