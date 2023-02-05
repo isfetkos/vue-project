@@ -11,6 +11,7 @@ import TalesComponent from "./src/components/tales-component.vue";
 import ContactComponent from "./src/components/contact-component.vue";
 import termsComponent from "./src/components/terms-component.vue";
 import LoginComponent from "./src/components/login-component.vue"
+import blogAdminComponent from "./src/components/blog-admin-component.vue"
 import { createI18n } from 'vue-i18n';
 import en from './src/locales/lang_en.json'
 import el from './src/locales/lang_el.json'
@@ -39,6 +40,7 @@ const app = createApp({
     IndexComponent,
     termsComponent,
     LoginComponent,
+    blogAdminComponent,
   },
   data() {
     return {
@@ -89,19 +91,7 @@ const container = document.querySelector(".container");
 const logo = document.querySelector(".logo");
 const toggleButton = document.querySelector(".toggle-button");
 const navLinks = document.querySelectorAll("nav a");
-const text = document.querySelector("#h3-text");
-
-
-// h3 linear gradient 
-
-const letters = text.innerHTML.split("");
-for (let i = 0; i < letters.length; i++) {
-  let letter = letters[i];
-  letters[i] = `<span class="letter">${letter}</span>`;
-}
-
-text.innerHTML = letters.join("");
-
+const adminbtn = document.querySelector(".admin-btn")
 
 // Add an event listener to the toggle button
 toggleMenu.addEventListener("click", function () {

@@ -35,6 +35,7 @@
           </v-col>
           <v-col cols="12" md="4">
             <v-text-field
+              w-50
               class="contact"
               type="email"
               :rules="emailRules"

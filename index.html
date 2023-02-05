@@ -19,6 +19,10 @@
       <div class="container">
         <div class="nav-logo-btn">
         <a href="index.html">
+          <div id="balloons">
+            <i id="balloon1"><img src="images/logo1_round.svg"></img></i>
+            <i id="balloon2"><img src="images/logo1_round.svg"></img></i>
+          </div>
           <img src="images/logo1.svg" class="logo" alt="Logo">
         </a>
         <button class="toggle-menu toggle-button hamburger-slim"></button>
@@ -39,7 +43,9 @@
       <component :is="siteComponent"></component>
       <footer>
         <div class="footer-container">
+          <div class="click" @click="changeSite('blogAdminComponent')">
           <h1><img class="balloon" src="images/balloon.svg">{{ $t("t_footer_header") }}<img class="balloon" src="images/balloon.svg"></h1>
+        </div>
         <div class="social-container">
           <div class="social-btn">
             <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-facebook</v-icon>
@@ -60,7 +66,6 @@
             <div>
               <div class="click" @click="changeSite('termsComponent')">
               <p class="terms">{{ $t("t_footer_legal") }}</p>
-              <div class="click" @click="changeSite('termsComponent')"></div>
             </div>
           </div>
         </div>
