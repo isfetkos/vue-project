@@ -1,13 +1,14 @@
 <template>
   <v-parallax :src="parallaxSrc">
     <p id="h3-text">{{ $t("t_index_header") }}</p>
-    <div class="about-container1">
-    <div class="about-container">
-      <img :src="meSrc" class="me-image" alt="Logo" />   
-        <p class="about-text">{{ $t("t_index_about") }}</p>
-    </div>
+  <div class="about-part">
+      <img :src="meSrc" class="me-image" alt="Logo" />
+    <h1 class="about-title">{{ $t("t_about_header") }}</h1>
+    <hr />
+    <p>{{ $t("t_index_about") }}</p>
   </div>
 
+  <!--Timeline-->
     <v-timeline direction="vertical" side="end" class="index-timeline">
       <v-timeline-item
         v-for="item in items"

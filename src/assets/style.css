@@ -1,7 +1,7 @@
 :root {
   --clr-purple: #8D629C;
   --clr-pink: #ED8D8D;
-  --clr-lpink: #f6cbcb;
+  --clr-lpink: rgb(246, 203, 203);
   --clr-lpink2: #ec95a0;
   --clr-white: #fff3f3;
   --clr-lgreen: #82CFB9;
@@ -284,64 +284,149 @@ svg {
   }
 
   .logo {
-    width: 80%;
+    width: 100%;
   }
 }
 
 /* Section about */
 
-.about-container1 {
-  width: 100%;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+.about-part {
+  position: relative;
+  width: 45%;
+  padding: 40px;
+  margin:auto;
+  border-radius: 8px;
+  background-image: linear-gradient(to bottom, rgba(255,0,0,0), rgba(246, 203, 203, 0.4));
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.15);
+  margin-bottom:60px;
 }
-
-.about-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 100px;
-  gap:20px;
-  width: 50%;
-}
-
 .me-image {
-  border: 10px solid;
-  border-image: linear-gradient(to left, var(--clr-lpink), var(--clr-lpink2));
+  border: 10px solid var(--clr-purple);
   border-image-slice: 1;
   object-fit: cover;
-  width: 250px;
+  width: 350px;
   height: 350px;
+  border-radius: 50%;
+  padding-top: 100p;
+  margin:auto;
+} 
+
+.about-title {
+  text-align: center;
+  color:#4D4D4D;
+  font-weight: 700;
+  font-size: 1.3em;
+  margin: 2em 0 0.5em 0;
 }
 
-.about-text {
-  max-height: 350px;
-  width: 200px;
-  width: auto;
-  color: var(--clr-white);
-  font-size: 1.5rem;
+.about-part hr {
+  border: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--clr-pink);
+  margin: 22px 0 20px;
+}
+
+.about-part p {
+  margin: 0 0 10em 0;
   text-align: justify;
+  color: #121212;
+
+}
+
+.about-part p:last-child {
+  margin-bottom: 0;
+}
+
+.btn,
+.about-symbol,
+.product__category {
+  font-size: 0.8em;
+  text-transform: uppercase;
+  letter-spacing: 1.4px;
+  font-weight: 700;
+}
+
+
+.lesson-part a {
+  text-decoration: none;
+  color: inherit;
+  color: var(--clr-lpink);
+}
+
+.btn {
+  display: inline-block;
+  color: var(--clr-lpink);
+  text-align: center;
+  padding: 1.75em 3.5em;
+  white-space: nowrap;
+  border-radius: 5px;
+}
+
+
+.product__btn {
+  position: absolute;
+  bottom: -30px;
+  right: 30px;
+  background-color: var(--clr-purple);
+  transition: background-color 0.3s cubic-bezier(0.4, 0, 0.2, 1), box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.15);
+}
+
+.product__btn:hover {
+  box-shadow: 0 36px 28px -20px rgba(0, 0, 0, 0.20);
+  background-color: var(--clr-pink);
+  color: var(--clr-white);
+}
+
+.location {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding-bottom: 100px;
+}
+#gmap {
+  width: 70%;
+  height: 500px;
+}
+
+@media (max-width: 1400px) {
+  .children {
+    flex-direction: column;
+    gap: 150px;
+  }
+  .lesson-part {
+    max-width: 600px;
+    max-height: 450px;
+  }
+
+}
+
+@media (max-width: 699px) {
+  .lesson-part {
+    max-width: 280px;
+    min-height: 600px;
+  }
 }
 
 @media (max-width: 800px) {
-  .about-container {
-    flex-direction: column;
-    gap: 10px;
-  }
   
-
-  .about-text {
-    font-size: 1.3em;
-    font-family: var(--ff-body);
-    height:300px;
+  .about-part {
+    width: 80%;
   }
-
   .me-image {
-    scale: 90%;
+    width:220px;
+    height:220px;
     }
 } 
-
+@media (max-width: 340px) {
+  .me-image {
+    width:120px;
+    height:120px;
+    }
+} 
 .index-timeline {
   height:auto !important;
 }
@@ -981,41 +1066,63 @@ Utilities
     max-width: 80rem;
   }
 }
-
-#balloons {
-  position: absolute;
-  top: 0px;
-  width: 100px;
+#logo-container {
+  position: relative;
 }
 
 #balloon1 {
-  top: 0px;
-  left: 0px;
-  display: inline-block;
-  z-index: 1;
-  -webkit-animation: falling 5s 0s infinite;
+  position: absolute;
+  width: 22%;
+  top: 0;
+  left: 42%;
+  transform: translate(-50%, -50%);
+  animation: fall 3.5s ease-out forwards;
 }
 
 #balloon2 {
-  top: 0px;
-  left: 50px;
-  display: inline-block;
-  z-index: 1;
-  -webkit-animation: falling 5s 0s infinite;
+  position: absolute;
+  width: 22%;
+  top: 0;
+  left: 61%;
+  transform: translate(-50%, -50%);
+  animation: fall2 4s ease-out forwards;
 }
-
-#balloons i {
-  -webkit-animation-timing-function: ease-in-out;
-}
-
-@-webkit-keyframes falling {
+@keyframes fall {
   0% {
-    top: 0px;
-    transform: translate3d(0,0,0);
+    top: 0;
+    left: 42%;
+    transform: translate(-50%, -50%);
+  }
+  28% {
+    transform: rotate(10deg) translate(-50%, -50%);
+  }
+  
+  60% {
+    transform: rotate(-10deg) translate(-50%, -50%);
   }
   100% {
-    top: 300px;
-    transform: translate3d(0,0,0);
+    top: 42%;
+    transform: rotate(0deg) translate(-50%, -50%);
+  }
+}
+
+
+@keyframes fall2 {
+  0% {
+    top: 0;
+    left: 61%;
+    transform: translate(-50%, -50%);
+  }
+  28% {
+    transform: rotate(15deg) translate(-50%, -50%);
+  }
+  
+  60% {
+    transform: rotate(-15deg) translate(-50%, -50%);
+  }
+  100% {
+    top: 89%;
+    left: 61%;
   }
 }
 
