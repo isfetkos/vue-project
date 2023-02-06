@@ -301,6 +301,7 @@ svg {
   box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.15);
   margin-bottom:60px;
 }
+
 .me-image {
   border: 10px solid var(--clr-purple);
   border-image-slice: 1;
@@ -439,8 +440,11 @@ svg {
   max-width: 1000px;
   margin-right: 30px;
 }
+.v-alert {
+  background-color: rgba(246, 203, 203, 0.4) !important;
+}
 .v-alert:hover {
-  background-color: rgba(246, 203, 203, 0.6) !important;
+  background-color: rgba(246, 203, 203, 0.8) !important;
 }
 /* Properties of  alert title */
 .v-alert-title {
@@ -480,9 +484,12 @@ svg {
   height: 500px;
   padding: 40px;
   border-radius: 8px;
-  background-color: var(--clr-lpink);
+  background-color: rgba(246, 203, 203, 0.8);
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.15);
+}
+.lesson-part:hover {
+  background-color: rgba(246, 203, 203, 1);
 }
 
 .lesson-circle {
@@ -661,6 +668,7 @@ svg {
     font-family: var(--ff-play);
     font-size: 2em;
     font-weight: 700;
+    text-align: center;
   }
   .balloon {
     display: inline;
@@ -693,6 +701,7 @@ svg {
     flex-direction: row;
     justify-content: space-between;
     border-top: 1px solid var(--clr-pink);
+    text-align: center;
   }
   .legal1 {
     display: inline;
@@ -708,6 +717,7 @@ svg {
       gap:10px;}
       .footer-container h1 {
         font-size: 1.5em;
+
       }
     }
     @media (width<400px) {
@@ -719,6 +729,7 @@ svg {
         }
         .legal p, .terms {
           font-size: 0.9em;
+          text-align: center;
         }
       }
     .terms:hover {
@@ -1119,7 +1130,7 @@ Utilities
     transform: rotate(-15deg) translate(-50%, -50%);
   }
   100% {
-    top: 89%;
+    top: 87%;
     left: 61%;
   }
 }
