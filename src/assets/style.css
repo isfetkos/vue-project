@@ -917,12 +917,7 @@ svg {
 .v_text {
   width: 30% !important;
 }
-.v_card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-direction: column;
-}
+
 
 /* Blog 
 Component 
