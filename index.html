@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <link rel="icon" href="/favicon.ico">
@@ -13,64 +14,82 @@
   <link rel="stylesheet"
     href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,1,200" />
 </head>
+
 <body>
   <div id="app">
     <v-app>
       <div class="container">
         <div class="nav-logo-btn">
-        <a href="index.html">
-          <div id="logo-container">
+          <router-link to="/">
+            <div id="logo-container">
               <i id="balloon1"><img src="images/logo1_round.svg"></i>
               <i id="balloon2"><img src="images/logo1_round.svg"></i>
-            <img src="images/logo1.svg" class="logo" alt="Logo">
-          </div>
-          
-        </a>
-        <button class="toggle-menu toggle-button hamburger-slim"></button>
-      </div>
+              <img src="images/logo1.svg" class="logo" alt="Logo">
+            </div>
+          </router-link>
+          <button class="toggle-menu toggle-button hamburger-slim"></button>
+        </div>
         <ul class="nav-list">
-          <li class="l1"><div class="click" @click="changeSite('IndexComponent')">{{ $t("t_nav_index") }}<span
-              class="material-symbols-outlined">favorite</span></div>
-         </li>
-           <li class="l1"><div class="click" @click="changeSite('LessonsComponent')">{{ $t("t_nav_lesson") }}<span
-              class="material-symbols-outlined">school</span></div></li>   
-          <li class="l1"><div class="click" @click="changeSite('TalesComponent')">{{ $t("t_nav_tales") }} <span
-              class="material-symbols-outlined">interests</span></div>
+          <li class="l1">
+            <router-link to="/">
+              <div class="click">{{ $t("t_nav_index") }}<span class="material-symbols-outlined">favorite</span></div>
+            </router-link>
           </li>
-          <li class="l1"><div class="click" @click="changeSite('ContactComponent')">{{ $t("t_nav_contact") }} <span
-              class="material-symbols-outlined">alternate_email</span></div></li>
+          <li class="l1">
+            <router-link to="/lessons">
+              <div class="click">{{ $t("t_nav_lesson") }}<span class="material-symbols-outlined">school</span></div>
+            </router-link>
+          </li>
+          <li class="l1">
+            <router-link to="/blog">
+              <div class="click">{{ $t("t_nav_blog") }} <span class="material-symbols-outlined">interests</span></div>
+            </router-link>
+          </li>
+          <li class="l1">
+            <router-link to="/contact">
+              <div class="click">{{ $t("t_nav_contact") }} <span
+                  class="material-symbols-outlined">alternate_email</span></div>
+            </router-link>
+          </li>
         </ul>
+        
       </div>
-      <component :is="siteComponent"></component>
+      <router-view></router-view>
+      
       <footer>
-        <div class="footer-container">
-          <div class="click" @click="changeSite('blogAdminComponent')">
-          <h1><img class="balloon" src="images/balloon.svg">{{ $t("t_footer_header") }}<img class="balloon" src="images/balloon.svg"></h1>
-        </div>
-        <div class="social-container">
-          <div class="social-btn">
-            <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-facebook</v-icon>
-            <a href="https://www.instagram.com/tell_your_kid_a_story/">
-              <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-instagram</v-icon>
-            </a>
-            <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-linkedin</v-icon>
-          </div>
-          <v-switch class="switch" color="var(--clr-lpink)" density="comfort" label="Ελληνικά | English" v-model="currentLanguage" true-value="el" false-value="en"></v-switch>
-        </div>
-          <div class="legal">
-            <div class="legal1">
-              <p>
-                <div class="click2" @click="changeSite('LoginComponent')">{{ new Date().getFullYear() }}</div>— Copyright <strong>Tell Your Kid A Story</strong></p>
+        <footer>
+          <div class="footer-container">
+            <h1><img class="balloon" src="images/balloon.svg">{{ $t("t_footer_header") }}<img class="balloon"
+                src="images/balloon.svg"></h1>
+            <div class="social-container">
+              <div class="social-btn">
+                <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-facebook</v-icon>
+                <a href="https://www.instagram.com/tell_your_kid_a_story/">
+                  <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-instagram</v-icon>
+                </a>
+                <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-linkedin</v-icon>
+              </div>
+              <v-switch class="switch" color="var(--clr-lpink)" density="comfort" label="Ελληνικά | English"
+                v-model="currentLanguage" true-value="el" false-value="en"></v-switch>
             </div>
-            <div>
-          </div>
-            <div>
-              <div class="click" @click="changeSite('termsComponent')">
-              <p class="terms">{{ $t("t_footer_legal") }}</p>
+            <div class="legal">
+              <div class="legal1">
+                <p>
+                  <router-link to="/login">
+                  {{ new Date().getFullYear() }}
+                </router-link>
+                — Copyright
+                <strong>Tell Your Kid A Story</strong></p>
+              </div>
+              <div>
+              </div>
+              <div>
+                <router-link to="/terms">
+                  <p class="terms">{{ $t("t_footer_legal") }}</p>
+                </router-link>
+              </div>
             </div>
-          </div>
-        </div>
-      </footer> 
+        </footer>
     </v-app>
   </div>
   <script type="module" src="main.js"></script>

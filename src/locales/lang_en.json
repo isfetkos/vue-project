@@ -1,7 +1,7 @@
 {
   "t_nav_index": "my story  ",
   "t_nav_lesson": "my lessons  ",
-  "t_nav_tales": "the tales  ",
+  "t_nav_blog": "my blog  ",
   "t_nav_contact": "contact  ",
   "t_footer_header": "My social media",
   "t_footer_legal": "Terms of use - Privacy Policy ",
@@ -23,7 +23,7 @@
   "t_lesson_text1": "Courses focusing on the use of the Greek language for primary and secondary school students. In addition to support in important subjects such as Greek, history or texts, special emphasis is placed on language use, argumentation and general knowledge.",
   "t_lesson_text2": "Courses focusing on the use of the Greek language for primary and secondary school students. In addition to support in important subjects such as Greek, history or texts, special emphasis is placed on language use, argumentation and general knowledge.",
   "t_lesson_text3": "Courses focusing on the use of the Greek language for primary and secondary school students. In addition to support in important subjects such as Greek, history or texts, special emphasis is placed on language use, argumentation and general knowledge.",
-  "t_tales_header":"Tales",
+  "t_blog_header":"My blog",
   "t_contact_header": "Contact",
   "t_contact_name": "Your name",
   "t_contact_surname": "Your surname",
@@ -31,5 +31,6 @@
   "t_contact_message": "Your message",
   "t_contact_header2": "The Office",
   "t_contact_header3": "Thank you for your message",
-  "t_easter": "You find my secret Login. Here I edit my blog :-)"
+  "t_easter": "You find my secret Login. Here I edit my blog :-)",
+  "t_adminblog_header": "New blog post"
 } 

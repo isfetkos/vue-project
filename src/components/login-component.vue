@@ -1,7 +1,6 @@
 <template>
   <v-parallax :src="parallaxSrc">
     <p id="h3-text">Admin Login</p>
-    <component :is="siteComponent"></component>
     <div class="login-container">
     <div class="v_card">
       <v-text-field
@@ -15,10 +14,11 @@
         type="password"
       ></v-text-field>
       <div class="login-container2">
+        <router-link to="/blogAdmin">
       <v-btn class="admin-btn" variant="tonal">Login</v-btn>
+    </router-link>
     </div>
       <p id="h4-text">{{ $t("t_easter") }}</p>
-    
   </div>
   </div>
   </v-parallax>

@@ -44,7 +44,6 @@
 </template>
 <script>
 export default { 
-    name: "lessons-component", 
     data() {
         return {
             parallaxSrc:"images/bitmap.svg"

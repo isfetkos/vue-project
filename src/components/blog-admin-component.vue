@@ -1,7 +1,10 @@
 <template>
     <v-parallax :src="parallaxSrc">
-            <p id="h3-text">{{ $t("t_tales_header") }}</p>
-           
+            <p id="h3-text">{{ $t("t_adminblog_header") }}</p>
+            <div class="admin-container">
+            <v-textarea auto-grow label="Label"></v-textarea>
+            <v-file-input label="File input"></v-file-input>
+            </div>
       </v-parallax>
 </template>
 <script>

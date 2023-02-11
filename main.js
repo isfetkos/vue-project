@@ -2,12 +2,13 @@ import { createApp } from "vue/dist/vue.esm-bundler.js";
 import "./src/assets/style.css";
 import "vuetify/styles";
 import { createVuetify } from "vuetify";
+import { createRouter, createWebHistory } from 'vue-router'
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import "@mdi/font/css/materialdesignicons.css"; 
 import LessonsComponent from "./src/components/lessons-component.vue";
 import IndexComponent from "./src/components/index-component.vue";
-import TalesComponent from "./src/components/tales-component.vue";
+import blogComponent from "./src/components/blog-component.vue";
 import ContactComponent from "./src/components/contact-component.vue";
 import termsComponent from "./src/components/terms-component.vue";
 import LoginComponent from "./src/components/login-component.vue"
@@ -22,6 +23,20 @@ const vuetify = createVuetify({
   directives,
 });
 
+const router = createRouter({
+  history: createWebHistory(),
+  routes: [
+    { path: '/', component: IndexComponent },
+    { path: '/lessons', component: LessonsComponent },
+    { path: '/blog', component: blogComponent },
+    { path: '/contact', component: ContactComponent },
+    { path: '/login', component: LoginComponent },
+    { path: '/blogAdmin', component: blogAdminComponent },
+    { path: '/terms', component: termsComponent }
+  ]
+});
+
+
 // 2. Create i18n instance with options
 const i18n = createI18n({
   locale: "el", // set locale
@@ -33,15 +48,7 @@ const i18n = createI18n({
 });
 
 const app = createApp({
-  components: {
-    LessonsComponent,
-    TalesComponent,
-    ContactComponent,
-    IndexComponent,
-    termsComponent,
-    LoginComponent,
-    blogAdminComponent,
-  },
+ 
   data() {
     return {
       siteComponent: "IndexComponent",
@@ -80,9 +87,10 @@ const app = createApp({
   }
 });
 
-app.use(i18n)
-app.use(vuetify)
-app.mount("#app")
+app.use(router);
+app.use(i18n);
+app.use(vuetify);
+app.mount("#app");
 
 
 const toggleMenu = document.querySelector(".toggle-menu");
