@@ -902,21 +902,24 @@ svg {
 /* Login component */
 
 #h4-text {
-  display: flex;
-  justify-content: center;
   color:#f6cbcb;
-  font-size: 1.3em;
+  font-size: 1em;
   margin-top:30px;
+  text-align: center;
 }
 .login-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  width: 60%;
+  margin-left: 10%;
+  margin-right: 10%;
 }
-.v_text {
-  width: 30% !important;
+.login-container2 {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
+
 
 
 /* Blog 
