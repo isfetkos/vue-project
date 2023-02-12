@@ -14,8 +14,8 @@
         type="password"
       ></v-text-field>
       <div class="login-container2">
-        <router-link to="/blogAdmin">
-      <v-btn class="admin-btn" variant="tonal">Login</v-btn>
+      <router-link to="/blogAdmin">    
+      <v-btn @click="login" class="admin-btn" variant="tonal">Login</v-btn>
     </router-link>
     </div>
       <p id="h4-text">{{ $t("t_easter") }}</p>
@@ -24,13 +24,19 @@
   </v-parallax>
 </template>
 <script>
+import { useAuth0 } from '@auth0/auth0-vue';
 export default {
   name: "login-component",
-  data() {
-    return {
-      parallaxSrc: "images/bitmap.svg",
-    };
-  },
-};
+setup() {
+      const { loginWithRedirect } = useAuth0();
+
+      return {
+        parallaxSrc: "images/bitmap.svg",
+        login: () => {
+          loginWithRedirect();
+        }
+      };
+    }
+  };
 </script>
 <style scoped></style>

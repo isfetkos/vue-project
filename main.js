@@ -2,22 +2,22 @@ import { createApp } from "vue/dist/vue.esm-bundler.js";
 import "./src/assets/style.css";
 import "vuetify/styles";
 import { createVuetify } from "vuetify";
-import { createRouter, createWebHistory } from 'vue-router'
+import { createRouter, createWebHistory } from "vue-router";
+import { createAuth0 } from '@auth0/auth0-vue';
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
-import "@mdi/font/css/materialdesignicons.css"; 
+import "@mdi/font/css/materialdesignicons.css";
 import LessonsComponent from "./src/components/lessons-component.vue";
 import IndexComponent from "./src/components/index-component.vue";
 import blogComponent from "./src/components/blog-component.vue";
 import ContactComponent from "./src/components/contact-component.vue";
 import termsComponent from "./src/components/terms-component.vue";
-import LoginComponent from "./src/components/login-component.vue"
-import blogAdminComponent from "./src/components/blog-admin-component.vue"
-import NotFoundComponent from "./src/components/not-found-component.vue"
-import { createI18n } from 'vue-i18n';
-import en from './src/locales/lang_en.json'
-import el from './src/locales/lang_el.json'
-
+import LoginComponent from "./src/components/login-component.vue";
+import blogAdminComponent from "./src/components/blog-admin-component.vue";
+import NotFoundComponent from "./src/components/not-found-component.vue";
+import { createI18n } from "vue-i18n";
+import en from "./src/locales/lang_en.json";
+import el from "./src/locales/lang_el.json";
 
 const vuetify = createVuetify({
   components,
@@ -27,30 +27,28 @@ const vuetify = createVuetify({
 const router = createRouter({
   history: createWebHistory(),
   routes: [
-    { path: '/', component: IndexComponent },
-    { path: '/lessons', component: LessonsComponent },
-    { path: '/blog', component: blogComponent },
-    { path: '/contact', component: ContactComponent },
-    { path: '/login', component: LoginComponent },
-    { path: '/blogAdmin', component: blogAdminComponent },
-    { path: '/terms', component: termsComponent },
-    { path: '/:pathMatch(.*)', component: NotFoundComponent }, // this route should be defined last
-  ]
+    { path: "/", component: IndexComponent },
+    { path: "/lessons", component: LessonsComponent },
+    { path: "/blog", component: blogComponent },
+    { path: "/contact", component: ContactComponent },
+    { path: "/login", component: LoginComponent },
+    { path: "/blogAdmin", component: blogAdminComponent },
+    { path: "/terms", component: termsComponent },
+    { path: "/:pathMatch(.*)", component: NotFoundComponent }, // this route should be defined last
+  ],
 });
-
 
 // 2. Create i18n instance with options
 const i18n = createI18n({
   locale: "el", // set locale
-  fallbackLocale: 'en', // set fallback locale
-  messages:{en, el}
+  fallbackLocale: "en", // set fallback locale
+  messages: { en, el },
   // set locale messages
   // If you need to specify other options, you can set other options
   // ...
 });
 
 const app = createApp({
- 
   data() {
     return {
       siteComponent: "IndexComponent",
@@ -65,32 +63,38 @@ const app = createApp({
       emailRules: [
         (v) => !!v || "E-mail is required",
         (v) => /.+@.+/.test(v) || "E-mail must be valid",
-    
       ],
-      currentLanguage: "el"
+      currentLanguage: "el",
     };
   },
   methods: {
-   
     changeLanguage() {
-      console.log("i am in")
-      i18n.locale = 'el'
-      console.log(i18n.locale)
-      this.$i18n.locale = 'el'
-    }
+      console.log("i am in");
+      i18n.locale = "el";
+      console.log(i18n.locale);
+      this.$i18n.locale = "el";
+    },
   },
   watch: {
     currentLanguage() {
-      this.$i18n.locale = this.currentLanguage
-    }
-  }
+      this.$i18n.locale = this.currentLanguage;
+    },
+  },
 });
 
+app.use(
+  createAuth0({
+    domain: "dev-4cav1l5curg7fa3a.us.auth0.com",
+    clientId: "J3CZuHdqEeXWRQEZu4BDsBbHWbRURkEc",
+    authorizationParams: {
+      redirect_uri: window.location.origin
+    }
+  })
+);
 app.use(router);
 app.use(i18n);
 app.use(vuetify);
 app.mount("#app");
-
 
 const toggleMenu = document.querySelector(".toggle-menu");
 const navList = document.querySelector(".nav-list");
@@ -98,7 +102,7 @@ const container = document.querySelector(".container");
 const logo = document.querySelector(".logo");
 const toggleButton = document.querySelector(".toggle-button");
 const navLinks = document.querySelectorAll("nav a");
-const adminbtn = document.querySelector(".admin-btn")
+const adminbtn = document.querySelector(".admin-btn");
 
 // Add an event listener to the toggle button
 toggleMenu.addEventListener("click", function () {
@@ -110,8 +114,7 @@ toggleMenu.addEventListener("click", function () {
   } else {
     navList.style.display = "flex";
     navList.style.flexDirection = "column";
-    container.style.flexDirection = "column"
-
+    container.style.flexDirection = "column";
   }
 });
 
@@ -143,4 +146,3 @@ navLinks.forEach((link) => {
     window.location.assign(event.target.href);
   });
 });
-
