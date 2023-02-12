@@ -957,3 +957,22 @@ svg {
   margin-right: 10%;
 }
 
+/* Loading Animation */
+
+.loading {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #f2f2f2;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.spinner {
+  background-color: #82CFB9;
+  width: 50%;
+  height: 50%;
+}

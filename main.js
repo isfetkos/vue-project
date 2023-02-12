@@ -69,10 +69,7 @@ const app = createApp({
     };
   },
   methods: {
-    changeSite(site) {
-      console.log(site);
-      this.siteComponent = site;
-    },
+   
     changeLanguage() {
       console.log("i am in")
       i18n.locale = 'el'
