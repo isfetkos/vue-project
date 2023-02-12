@@ -1,7 +1,7 @@
 <template>
     <v-parallax :src="parallaxSrc">
             <p id="h3-text">{{ $t("t_blog_header") }}</p>
-            
+            <p>kjdsfkafjsdfj</p>
       </v-parallax>
 </template>
 <script>

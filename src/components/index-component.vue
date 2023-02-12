@@ -27,7 +27,7 @@
       </v-timeline-item>
     </v-timeline>
     <div class="d-flex flex-column justify-center align-center text-white instagram-container">
-      <p id="h3-text">Tell Your Kid A Story</p>
+<p id="h3-text">Tell Your Kid A Story</p>
       <iframe class="instagram-frame" src="https://www.instagram.com/p/Cmr7wmGL2vq/embed" frameborder="0"></iframe>
     </div>
   </v-parallax>

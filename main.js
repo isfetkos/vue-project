@@ -13,6 +13,7 @@ import ContactComponent from "./src/components/contact-component.vue";
 import termsComponent from "./src/components/terms-component.vue";
 import LoginComponent from "./src/components/login-component.vue"
 import blogAdminComponent from "./src/components/blog-admin-component.vue"
+import NotFoundComponent from "./src/components/not-found-component.vue"
 import { createI18n } from 'vue-i18n';
 import en from './src/locales/lang_en.json'
 import el from './src/locales/lang_el.json'
@@ -32,7 +33,8 @@ const router = createRouter({
     { path: '/contact', component: ContactComponent },
     { path: '/login', component: LoginComponent },
     { path: '/blogAdmin', component: blogAdminComponent },
-    { path: '/terms', component: termsComponent }
+    { path: '/terms', component: termsComponent },
+    { path: '/:pathMatch(.*)', component: NotFoundComponent }, // this route should be defined last
   ]
 });
 

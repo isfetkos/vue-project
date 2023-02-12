@@ -976,3 +976,15 @@ svg {
   width: 50%;
   height: 50%;
 }
+
+/* error page */
+.error-gif {
+  background: transparent;
+  border-radius: 10%;
+}
+
+.error-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}

@@ -32,5 +32,6 @@
   "t_contact_header2": "The Office",
   "t_contact_header3": "Thank you for your message",
   "t_easter": "You find my secret Login. Here I edit my blog :-)",
-  "t_adminblog_header": "New blog post"
+  "t_adminblog_header": "New blog post",
+  "t_error": "Oof something went wrong.."
 } 

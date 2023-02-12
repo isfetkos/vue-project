@@ -32,5 +32,6 @@
   "t_contact_header2": "Το Γραφείο",
   "t_contact_header3": "Σε ευχαριστώ πολύ για το μήνυμά σου",
   "t_easter": "Βρήκες το μυστικό Login μου. Εδώ επεργάζομαι το blog μου :-)",
-  "t_adminblog_header": "Νέο blog post"
+  "t_adminblog_header": "Νέο blog post",
+  "t_error": "Κάτι δεν πήγε καλά.."
 } 
