@@ -502,7 +502,7 @@ svg {
   height: 800px;
   width: 510px;
   border: 10px solid var(--clr-lpink);
-  margin-bottom: 60px;}
+  }
 
 @media (max-width: 600px) {
   .instagram-frame {
@@ -1000,4 +1000,8 @@ svg {
   display: flex;
   justify-content: center;
   align-items: center;
+}
+
+.v-parallax {
+  margin-bottom: 60px;
 }

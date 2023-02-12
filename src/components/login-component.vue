@@ -28,13 +28,13 @@ import { useAuth0 } from '@auth0/auth0-vue';
 export default {
   name: "login-component",
 setup() {
-      const { loginWithRedirect } = useAuth0();
+      // const { loginWithRedirect } = useAuth0();
 
       return {
         parallaxSrc: "images/bitmap.svg",
-        login: () => {
-          loginWithRedirect();
-        }
+        // login: () => {
+        //   loginWithRedirect();
+        // }
       };
     }
   };
