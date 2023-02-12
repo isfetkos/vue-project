@@ -56,11 +56,8 @@
             </router-link>
           </li>
         </ul>
-        
       </div>
       <router-view></router-view>
-     
-      <footer>
         <footer>
           <div class="footer-container">
             <h1><img class="balloon" src="images/balloon.svg">{{ $t("t_footer_header") }}<img class="balloon"
@@ -73,7 +70,7 @@
                 </a>
                 <v-icon class="icon-btn" color="var(--clr-lpink)">mdi-linkedin</v-icon>
               </div>
-              <v-switch class="switch" color="var(--clr-lpink)" density="comfort" label="Ελληνικά | English"
+              <v-switch class="switch" color="var(--clr-lpink)" density="comfort" label="English | Ελληνικά"
                 v-model="currentLanguage" true-value="el" false-value="en"></v-switch>
             </div>
             <div class="legal">
