@@ -35,7 +35,7 @@ const router = createRouter({
     { path: "/login", component: LoginComponent },
     { path: "/blogAdmin", component: blogAdminComponent },
     { path: "/terms", component: termsComponent },
-    { path: "/:pathMatch(.*)", component: NotFoundComponent }, // this route should be defined last
+    { path: '/:catchAll(.*)', component: NotFoundComponent }, // this route should be defined last
   ],
 });
 
