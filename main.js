@@ -26,6 +26,7 @@ const vuetify = createVuetify({
 
 const router = createRouter({
   history: createWebHistory(),
+  mode: 'history',
   routes: [
     { path: "/", component: IndexComponent },
     { path: "/lessons", component: LessonsComponent },
