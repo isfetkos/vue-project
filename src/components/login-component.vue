@@ -15,10 +15,13 @@
       ></v-text-field>
       <div class="login-container2">
       <router-link to="/blogAdmin">    
-      <v-btn @click="login" class="admin-btn" variant="tonal">Login</v-btn>
+      <!-- <v-btn @click="login" class="admin-btn" variant="tonal">Login</v-btn> -->
+      <div>
+        <button @click="login">Log in</button>
+      </div>
     </router-link>
     </div>
-      <p id="h4-text">{{ $t("t_easter") }}</p>
+      <p id="h5-text">{{ $t("t_easter") }}</p>
   </div>
   </div>
   </v-parallax>
@@ -28,13 +31,13 @@ import { useAuth0 } from '@auth0/auth0-vue';
 export default {
   name: "login-component",
 setup() {
-      // const { loginWithRedirect } = useAuth0();
+      const { loginWithRedirect } = useAuth0();
 
       return {
         parallaxSrc: "images/bitmap.svg",
-        // login: () => {
-        //   loginWithRedirect();
-        // }
+        login: () => {
+        loginWithRedirect();
+         }
       };
     }
   };
