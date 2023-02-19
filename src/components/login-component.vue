@@ -19,6 +19,7 @@
               <button @click="login">Log in</button>
             </div>
           </router-link>
+        </div>
         <p id="h5-text">{{ $t("t_easter") }}</p>
       </div>
     </div>
