@@ -4,6 +4,7 @@ import "vuetify/styles";
 import { createVuetify } from "vuetify";
 import { createRouter, createWebHistory } from "vue-router";
 import { createAuth0 } from '@auth0/auth0-vue';
+import { authGuard } from "@auth0/auth0-vue";
 import * as components from "vuetify/components";
 import * as directives from "vuetify/directives";
 import "@mdi/font/css/materialdesignicons.css";
@@ -16,7 +17,6 @@ import LoginComponent from "./src/components/login-component.vue";
 import blogAdminComponent from "./src/components/blog-admin-component.vue";
 import NotFoundComponent from "./src/components/not-found-component.vue";
 import profile from "./src/components/profile.vue";
-
 import { createI18n } from "vue-i18n";
 import en from "./src/locales/lang_en.json";
 import el from "./src/locales/lang_el.json";
@@ -35,7 +35,7 @@ const router = createRouter({
     { path: "/blog", component: blogComponent },
     { path: "/contact", component: ContactComponent },
     { path: "/login", component: LoginComponent },
-    { path: "/blogAdmin", component: blogAdminComponent },
+    { path: "/blogAdmin", component: blogAdminComponent, beforeEnter: authGuard, },
     { path: "/terms", component: termsComponent },
     { path: "/profile", component: profile },
     { path: '/:catchAll(.*)', component: NotFoundComponent }, // this route should be defined last
@@ -107,7 +107,6 @@ const container = document.querySelector(".container");
 const logo = document.querySelector(".logo");
 const toggleButton = document.querySelector(".toggle-button");
 const navLinks = document.querySelectorAll("nav a");
-const adminbtn = document.querySelector(".admin-btn");
 
 // Add an event listener to the toggle button
 toggleMenu.addEventListener("click", function () {
