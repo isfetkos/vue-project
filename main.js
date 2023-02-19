@@ -92,7 +92,7 @@ app.use(
     domain: "dev-4cav1l5curg7fa3a.us.auth0.com",
     clientId: "J3CZuHdqEeXWRQEZu4BDsBbHWbRURkEc",
     authorizationParams: {
-      redirect_uri: window.location.replace("/blogAdmin")
+      redirect_uri: `${window.location.origin}/blogAdmin`
     }
   })
 );
