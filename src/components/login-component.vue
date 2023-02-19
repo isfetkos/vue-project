@@ -14,11 +14,11 @@
           type="password"
         ></v-text-field>
         <div class="login-container2">
-            <!-- <v-btn @click="login" class="admin-btn" variant="tonal">Login</v-btn> -->
-            <div>
+          <router-link to="/blogAdmin">
+          <div>
               <button @click="login">Log in</button>
             </div>
-        </div>
+          </router-link>
         <p id="h5-text">{{ $t("t_easter") }}</p>
       </div>
     </div>
