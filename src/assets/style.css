@@ -614,6 +614,19 @@ svg {
   }
 }
 
+.img-lessons {
+  height: calc(100px + 12vw);
+  display: grid;
+  justify-content: center;
+  align-items: center;
+}
+
+.carousel-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  
+}
 
 
 /* Section Blog */

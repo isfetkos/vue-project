@@ -11,7 +11,7 @@
            @click="login">Log in</v-btn>
             </div>
           </router-link>
-        <p id="h2">{{ $t("t_easter") }}</p>
+        <p class="about-title">{{ $t("t_easter") }}</p>
   </v-parallax>
 </template>
 <script>

@@ -36,35 +36,25 @@
         <a href="#" class="product__btn btn">Μάθε περισσοτερα</a>
       </div>
     </div>
-    <p id="h1">Για τους νεαρούς μου μαθητές</p>
-    <v-carousel
-      cycle
-      height="400"
-      hide-delimiter-background
-      show-arrows="hover"
-    >
+    <p id="h1">Για τα νέα ταλέντα</p>
+    <v-carousel height="400" hide-delimiters progress="primary">
       <v-carousel-item>
-        <v-sheet color="rgba(0,0,0,0)" height="100%">
-          <div class="d-flex fill-height justify-center align-center">
-            <div class="text-h5"> Η γλώσσα είναι ένα εργαλείο </div>
-          </div>
-        </v-sheet>
+        <div class="carousel-container">
+          <img class="img-lessons" src="/images/undraw_doll_play_evbw.svg" />
+        </div>
       </v-carousel-item>
       <v-carousel-item>
-        <v-sheet color="rgba(0,0,0,0)" height="100%">
-          <div class="d-flex fill-height justify-center align-center">
-            <div class="text-h5"> Slide</div>
-          </div>
-        </v-sheet>
-      </v-carousel-item>
-      <v-carousel-item>
-        <v-sheet color="rgba(0,0,0,0)" height="100%">
-          <div class="d-flex fill-height justify-center align-center">
-            <div class="text-h5"> Slide</div>
-          </div>
-        </v-sheet>
+        <div class="carousel-container">
+          <img class="img-lessons" src="/images/undraw_online_learning_re_qw08.svg" />
+
+          
+        </div>
       </v-carousel-item>
     </v-carousel>
+    <p id="h1">Λίγο πριν το πανεπιστήμειο</p>
+    <img class="img-lessons" src="public/images/undraw_education_f8ru.svg" />
+    <p id="h1">Θα βρεις τον δάσκαλο σου..</p>
+    <img class="img-lessons" src="public/images/undraw_professor_re_mj1s.svg" />
   </v-parallax>
 </template>
 <script>
@@ -72,6 +62,7 @@ export default {
   data() {
     return {
       parallaxSrc: "images/bitmap.svg",
+      lesson1: "images/undraw_online_learning_re_qw08.svg",
     };
   },
 };
