@@ -1,28 +1,17 @@
 <template>
   <v-parallax :src="parallaxSrc">
-    <p id="h3-text">Admin Login</p>
-    <div class="login-container">
-      <div class="v_card">
-        <v-text-field
-          class="v_text"
-          label="Username"
-          type="name"
-        ></v-text-field>
-        <v-text-field
-          class="v_text"
-          label="Password"
-          type="password"
-        ></v-text-field>
-        <div class="login-container2">
+    <p id="h1">Admin Login</p>
           <router-link to="/blogAdmin">
-          <div>
-              <button @click="login">Log in</button>
+          <div class="center-container">
+            <v-btn
+            class="button-hover"
+            variant="outlined"
+            bg-color="var(--clr-pink)"
+            size="large"
+           @click="login">Log in</v-btn>
             </div>
           </router-link>
-        </div>
-        <p id="h5-text">{{ $t("t_easter") }}</p>
-      </div>
-    </div>
+        <p id="h2">{{ $t("t_easter") }}</p>
   </v-parallax>
 </template>
 <script>
@@ -41,3 +30,8 @@ export default {
 };
 </script>
 <style scoped></style>
+
+type="button"
+id="btn-signup"
+classs="btn btn-default btn-block">
+Sign up

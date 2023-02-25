@@ -1,6 +1,6 @@
 <template>
   <v-parallax :src="parallaxSrc">
-    <p id="h3-text">{{ $t("t_lesson_header") }}</p>
+    <p id="h1">{{ $t("t_lesson_header") }}</p>
     <div class="children">
       <div class="lesson-part">
         <span class="lesson-circle">
@@ -36,7 +36,7 @@
         <a href="#" class="product__btn btn">Μάθε περισσοτερα</a>
       </div>
     </div>
-    <p id="h4-text-white">Για τους νεαρούς μου μαθητές</p>
+    <p id="h1">Για τους νεαρούς μου μαθητές</p>
     <v-carousel
       cycle
       height="400"

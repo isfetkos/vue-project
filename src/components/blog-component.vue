@@ -1,6 +1,6 @@
 <template>
   <v-parallax :src="parallaxSrc">
-    <p id="h3-text">{{ $t("t_blog_header") }}</p>
+    <p id="h1">{{ $t("t_blog_header") }}</p>
     <div class="blog-container">
       <v-card width="344">
         <v-img
