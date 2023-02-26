@@ -37,27 +37,95 @@
       </div>
     </div>
     <p id="h1">Για τα νέα ταλέντα</p>
-    <v-carousel height="600" hide-delimiters progress="primary">
+    <v-carousel hide-delimiters progress="#8d629c">
       <v-carousel-item>
         <div class="carousel-container">
           <div class="carousel-text-field">
-            <p class="carousel-title">Γνώση με παιχνίδι</p>
+            <p class="carousel-title">Έμφαση στα βασικά</p>
             <hr>
-          
-          <img class="img-lessons" src="/images/undraw_doll_play_evbw.svg" />
+          <img class="img-lessons" src="/images/undraw_book_lover_re_rwjy.svg" />
         </div>
       </div>
       </v-carousel-item>
       <v-carousel-item>
         <div class="carousel-container">
-          <img class="img-lessons" src="/images/undraw_online_learning_re_qw08.svg" />
+          <div class="carousel-text-field">
+            <p class="carousel-title">Στο γραφείο ή online</p>
+            <hr>
+            <img class="img-lessons" src="/images/undraw_online_learning_re_qw08.svg" />
+          </div>
+      </div>
+      </v-carousel-item>
+      <v-carousel-item>
+        <div class="carousel-container">
+          <div class="carousel-text-field">
+            <p class="carousel-title">Γνώση με παιχνίδι</p>
+            <hr>
+          <img class="img-lessons" src="/images/undraw_doll_play_evbw.svg" />
         </div>
+      </div>
       </v-carousel-item>
     </v-carousel>
     <p id="h1">Λίγο πριν το πανεπιστήμειο</p>
-    <img class="img-lessons" src="/images/undraw_education_f8ru.svg" />
+    <v-carousel hide-delimiters progress="#8d629c">
+      <v-carousel-item>
+        <div class="carousel-container">
+          <div class="carousel-text-field">
+            <p class="carousel-title">Προαιτημασία καριέρας</p>
+            <hr>
+          <img class="img-lessons" src="/images/undraw_career_progress_ivdb.svg" />
+        </div>
+      </div>
+      </v-carousel-item>
+      <v-carousel-item>
+        <div class="carousel-container">
+          <div class="carousel-text-field">
+            <p class="carousel-title">Πολυετή επιτυχία Πανελληνίων</p>
+            <hr>
+            <img class="img-lessons" src="/images/undraw_teamwork_hpdk.svg" />
+          </div>
+      </div>
+      </v-carousel-item>
+      <v-carousel-item>
+        <div class="carousel-container">
+          <div class="carousel-text-field">
+            <p class="carousel-title">Δοκιμασμένο υλικό προαιτημασίας</p>
+            <hr>
+          <img class="img-lessons" src="/images/undraw_my_files_swob.svg" />
+        </div>
+      </div>
+      </v-carousel-item>
+    </v-carousel>
     <p id="h1">Θα βρεις τον δάσκαλο σου..</p>
-    <img class="img-lessons" src="/images/undraw_professor_re_mj1s.svg" />
+    <v-carousel hide-delimiters progress="#8d629c">
+      <v-carousel-item>
+        <div class="carousel-container">
+          <div class="carousel-text-field">
+            <p class="carousel-title">Ταχήρυθμα σεμινάρια</p>
+            <hr>
+          <img class="img-lessons" src="/images/undraw_in_no_time_-6-igu.svg" />
+        </div>
+      </div>
+      </v-carousel-item>
+      <v-carousel-item>
+        <div class="carousel-container">
+          <div class="carousel-text-field">
+            <p class="carousel-title">Προσωπικές σημείωσεις</p>
+            <hr>
+            <img class="img-lessons" src="/images/undraw_teamwork_hpdk.svg" />
+          </div>
+      </div>
+      </v-carousel-item>
+      <v-carousel-item>
+        <div class="carousel-container">
+          <div class="carousel-text-field">
+            <p class="carousel-title">Δοκιμασμένο υλικό προαιτημασίας</p>
+            <hr>
+          <img class="img-lessons" src="/images/undraw_my_files_swob.svg" />
+        </div>
+      </div>
+      </v-carousel-item>
+    </v-carousel>
   </v-parallax>
 </template>
 <script>

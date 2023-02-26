@@ -614,6 +614,10 @@ svg {
   }
 }
 
+.v-window__container {
+  padding-bottom:100px;
+}
+
 .carousel-container {
   display: flex;
   justify-content: center;
@@ -621,7 +625,6 @@ svg {
   gap:50px;
 }
 .carousel-text-field {
-  /* height: calc(100px + 12vw); */
   padding: 40px;
   border-radius: 8px;
   background-color: rgba(246, 203, 203, 0.6);
@@ -630,10 +633,9 @@ svg {
 }
 .carousel-title {
   text-align: center;
-  color: #4d4d4d;
+  color: var(--clr-white);
   font-weight: 700;
   font-size: calc(1em + 0.5vw);
-  margin: 0.5em 0 0 0;
 }
 .carousel-text-field:hover {
   background-color: rgba(246, 203, 203, 1);
@@ -648,6 +650,11 @@ svg {
 
 .img-lessons {
   height: calc(100px + 12vw);
+}
+
+.v-carousel button {
+  color:var(--clr-purple);
+  background-color: var(--clr-lpink);
 }
 
 /* Section Blog */
