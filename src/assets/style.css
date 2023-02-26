@@ -520,7 +520,7 @@ svg {
   height: 500px;
   padding: 40px;
   border-radius: 8px;
-  background-color: rgba(246, 203, 203, 0.8);
+  background-color: rgba(246, 203, 203, 0.6);
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.15);
 }
@@ -614,20 +614,41 @@ svg {
   }
 }
 
-.img-lessons {
-  height: calc(100px + 12vw);
-  display: grid;
-  justify-content: center;
-  align-items: center;
-}
-
 .carousel-container {
   display: flex;
   justify-content: center;
   align-items: center;
-  
+  gap:50px;
+}
+.carousel-text-field {
+  /* height: calc(100px + 12vw); */
+  padding: 40px;
+  border-radius: 8px;
+  background-color: rgba(246, 203, 203, 0.6);
+  transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+  box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.15);
+}
+.carousel-title {
+  text-align: center;
+  color: #4d4d4d;
+  font-weight: 700;
+  font-size: calc(1em + 0.5vw);
+  margin: 0.5em 0 0 0;
+}
+.carousel-text-field:hover {
+  background-color: rgba(246, 203, 203, 1);
+}
+.carousel-text-field hr {
+  border: 0;
+  height: 3px;
+  width: 100%;
+  background-color: var(--clr-pink);
+  margin: 1em 0 2em;
 }
 
+.img-lessons {
+  height: calc(100px + 12vw);
+}
 
 /* Section Blog */
 
