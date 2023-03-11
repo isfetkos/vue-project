@@ -1,6 +1,6 @@
 <template>
   <v-parallax :src="parallaxSrc">
-    <p id="h1">Admin Login</p>
+    <p class="hh1">Admin Login</p>
           <router-link to="/blogAdmin">
           <div class="center-container">
             <v-btn

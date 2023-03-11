@@ -1,10 +1,10 @@
 <template>
   <v-parallax :src="parallaxSrc">
-    <p id="h1">{{ $t("t_index_header") }}</p>
+    <p class="hh1">{{ $t("t_index_header") }}</p>
   <div class="about-part">
       <img :src="meSrc" class="me-image" alt="Logo" />
     <h1 class="about-title">{{ $t("t_about_header") }}</h1>
-    <hr />
+    <hr/>
     <p>{{ $t("t_index_about") }}</p>
   </div>
 
@@ -27,7 +27,7 @@
       </v-timeline-item>
     </v-timeline>
     <div class="d-flex flex-column justify-center align-center text-white instagram-container">
-    <p id="h1">Tell Your Kid A Story</p>
+    <p class="hh1">Tell Your Kid A Story</p>
       <iframe class="instagram-frame" src="https://www.instagram.com/p/Cmr7wmGL2vq/embed" frameborder="0"></iframe>
     </div>
   </v-parallax>

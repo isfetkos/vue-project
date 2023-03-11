@@ -1,6 +1,6 @@
 <template>
   <v-parallax :src="parallaxSrc">
-    <p id="h1">{{$t("t_contact_header")}}</p>
+    <p class="hh1">{{$t("t_contact_header")}}</p>
   
     <form ref="form" @submit.prevent="sendEmail">
       <v-container>
@@ -109,7 +109,7 @@
       </div>
     </form>
     <div class="location">
-      <p id="h1">{{$t("t_contact_header2")}}</p>
+      <p class="hh1">{{$t("t_contact_header2")}}</p>
         <iframe id="gmap" src="https://maps.google.com/maps?q=platanias,%20chania&t=&z=15&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0">
         </iframe>
   </div> 

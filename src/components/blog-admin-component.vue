@@ -1,6 +1,6 @@
 <template>
     <v-parallax :src="parallaxSrc">
-            <p id="h1">{{ $t("t_adminblog_header") }}</p>
+            <p class="hh1">{{ $t("t_adminblog_header") }}</p>
             <div class="admin-container">
             <v-textarea rows="1" label="Title"></v-textarea>
             <v-textarea auto-grow label="Label"></v-textarea>

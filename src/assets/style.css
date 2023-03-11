@@ -84,7 +84,7 @@ svg {
 
 /* Typography */
 
-#h1 {
+.hh1 {
   display: flex;
   justify-content: center;
   align-items: center;
@@ -614,15 +614,9 @@ svg {
   }
 }
 
-.v-window__container {
-  padding-bottom:100px;
-}
-
-.carousel-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  gap:50px;
+.carousel-margin {
+  margin-left: 5%;
+  margin-right: 5%;
 }
 .carousel-text-field {
   padding: 40px;
@@ -630,6 +624,11 @@ svg {
   background-color: rgba(246, 203, 203, 0.6);
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   box-shadow: 0 30px 25px -20px rgba(0, 0, 0, 0.15);
+  height: 500px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
 }
 .carousel-title {
   text-align: center;
@@ -650,6 +649,7 @@ svg {
 
 .img-lessons {
   height: calc(100px + 12vw);
+  margin: auto;
 }
 
 .v-carousel button {
