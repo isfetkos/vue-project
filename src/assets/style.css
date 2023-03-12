@@ -103,6 +103,9 @@ svg {
   max-width: 100%;
   min-width: 15px;
 }
+.logo:hover {
+  filter: brightness(1.5);
+}
 
 /* Animation of balloons */
 
@@ -615,11 +618,17 @@ svg {
 }
 
 .carousel-margin {
-  margin-left: 5%;
-  margin-right: 5%;
+  margin-left: 20%;
+  margin-right: 20%;
+}
+@media (max-width: 500px) {
+  .carousel-margin {
+    margin-left: 8%;
+    margin-right:8%;
+  }
 }
 .carousel-text-field {
-  padding: 40px;
+  padding: 40px; 
   border-radius: 8px;
   background-color: rgba(246, 203, 203, 0.6);
   transition: box-shadow 0.3s cubic-bezier(0.4, 0, 0.2, 1);
